@@ -24,8 +24,15 @@
             <h1 class="temp">72°F</h1>
             <h2 class="city">San Diego</h2>
             <div class="details">
-
-                <div class="col" <img src="images/wind.png">
+                <div class="col">
+                    <img src="images/humidity.png">
+                    <div>
+                        <p class="humidity">40%</p>
+                        <p>humidity</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="images/wind.png">
                     <div>
                         <p class="wind">10 mph</p>
                         <p>Wind Speed</p>
@@ -41,8 +48,6 @@
                 const searchbox = document.querySelector(".search input");
                 const searchBtn = document.querySelector(".search button");
                 const weatherIcon = document.querySelector(".weather-icon");
-
-
                 async function checkWeather(city) {
                     const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
                     if (response.status == 404) {
